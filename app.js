@@ -40,24 +40,28 @@ const confirmRole = async (answer) => {
 function engineerPrompt() {
   inquirer.prompt([
     {
-      type: "input",
-      message: "What's your engineer's name?",
       name: "name",
+      message: "What's your engineer's name?",
+      type: "input",
+      // validate: confirmString,
     },
     {
-      type: "input",
-      message: "What's your engineer's id",
       name: "id",
+      message: "What's your engineer's id",
+      type: "input",
+      // validate: confirmNumber,
     },
     {
-      type: "input",
-      message: "What's your engineer's email?",
       name: "email",
+      message: "What's your engineer's email?",
+      type: "input",
+      // validate: confirmString,
     },
     {
-      type: "input",
-      message: "What's your engineer's GitHub username?",
       name: "github",
+      message: "What's your engineer's GitHub username?",
+      type: "input",
+      // validate: confirmString,
     },
   ]);
 }
@@ -65,24 +69,28 @@ function engineerPrompt() {
 function internPrompt() {
   inquirer.prompt([
     {
-      type: "input",
-      message: "What's your intern's name?",
       name: "name",
+      message: "What's your intern's name?",
+      type: "input",
+      // validate: confirmString,
     },
     {
-      type: "input",
-      message: "What's your intern's id",
       name: "id",
+      message: "What's your intern's id",
+      type: "input",
+      // validate: confirmNumber,
     },
     {
-      type: "input",
-      message: "What's your intern's email?",
       name: "email",
+      message: "What's your intern's email?",
+      type: "input",
+      // validate: confirmString,
     },
     {
-      type: "input",
-      message: "What is your intern's school?",
       name: "school",
+      message: "What is your intern's school?",
+      type: "input",
+      // validate: confirmString,
     },
   ]);
 }
