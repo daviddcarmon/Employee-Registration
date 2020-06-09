@@ -44,6 +44,14 @@ const confirmNumber = async (input) => {
   }
 };
 
+const confirmEmpty = async (input) => {
+  if (input === "") {
+    return `Parameter cannot be empty`;
+  } else {
+    return true;
+  }
+};
+
 const confirmRole = async (answer) => {
   if (answer.role === "Engineer") {
     engineerPrompt();
@@ -69,7 +77,7 @@ function setEmployees(role) {
     return true;
   }
   if (role === "I don't add anymore.") {
-    render(employeeList);
+    writeFileAsync("team.html", render(employeeList));
     done();
   }
 }
@@ -103,7 +111,7 @@ function employees() {
         type: "input",
         message: "What is the manager's email?",
         name: "email",
-        validate: confirmString,
+        validate: confirmEmpty,
       },
       {
         type: "input",
@@ -150,7 +158,7 @@ function intern(name, id, email, role, school) {
         type: "input",
         message: "What's your intern's email?",
         name: "email",
-        validate: confirmString,
+        validate: confirmEmpty,
       },
       {
         type: "input",
@@ -175,7 +183,7 @@ function intern(name, id, email, role, school) {
       );
       employeeList.push(intern);
       setEmployees(internObj.role);
-      console.log(intern);
+      //   console.log(intern);
     });
 }
 
@@ -199,12 +207,12 @@ function engineer() {
         type: "input",
         message: "What's your engineer's email?",
         name: "email",
-        validate: confirmString,
+        validate: confirmEmpty,
       },
       {
         type: "input",
         message: "What's your engineer's GitHub username?",
-        name: "github",
+        name: "gitHub",
         validate: confirmString,
       },
       {
@@ -225,7 +233,7 @@ function engineer() {
       //   console.log(engineer);
       employeeList.push(engineer);
       setEmployees(engineerObj.role);
-      console.log(engineer);
+      //   console.log(engineer);
     });
 }
 
@@ -249,7 +257,7 @@ async function EmployeeRegistration() {
         name: "email",
         message: "What is the manager's email?",
         type: "input",
-        validate: confirmString,
+        validate: confirmEmpty,
       },
       {
         name: "number",

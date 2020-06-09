@@ -1,0 +1,41 @@
+body {
+  background-image: url(https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80);
+}
+
+#header {
+  background-color: black;
+  color: white;
+}
+
+#manager {
+  background-color: rgba(0, 0, 0, 0.438);
+  color: red;
+}
+
+#engineer {
+  background-color: rgba(0, 0, 0, 0.438);
+  color: lime;
+}
+
+#intern {
+  background-color: rgba(0, 0, 0, 0.438);
+  color: yellow;
+}
+
+.list-group-item {
+  background-color: rgba(0, 0, 0, 0.438);
+  color: white;
+}
+
+a {
+  color: orange;
+  list-style-type: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+  font-weight: bolder;
+}
